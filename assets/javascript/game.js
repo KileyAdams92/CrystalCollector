@@ -60,5 +60,5 @@ function resetButton() {
   logging();
 }
 
-document.getElementById("reset").onclick = resetButton;
+$("reset").onclick = resetButton;
 startGame();
