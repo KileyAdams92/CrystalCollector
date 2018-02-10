@@ -1,0 +1,12 @@
+body {
+    /* background-color: lightblue; */
+     background-image: url("../images/green_dust_scratch/green_dust_scratch.png");
+}
+
+.numberCol {
+    text-align: center;
+}
+
+.container-fluid{
+    text-align: center;
+}
