@@ -46,19 +46,19 @@ function startGame() {
 
 function logging() {
   var logWins = "<h3> Wins : " + wins + "</h3>";
-var logLosses = "<h3> Losses : " + losses + "</h3>";
+  var logLosses = "<h3> Losses : " + losses + "</h3>";
   $("#wins").html(logWins);
-    $("#losses").html(logLosses);
-    
+  $("#losses").html(logLosses);
+
 
 }
 
 function resetButton() {
   wins = 0;
   losses = 0;
-  startGame();	
+  startGame();
   logging();
 }
-
-$("reset").onclick = resetButton;
+// everytime I changed the code to jQuery, my reset button wouldn't work for the wins/losses
+document.getElementById("reset").onclick = resetButton;
 startGame();
