@@ -3,6 +3,7 @@ var counter;
 var wins = 0;
 var losses = 0;
 
+
 $(".card-img-top").on("click", function () {
 
   var crystalValue = ($(this).attr("data-crystalvalue"));
@@ -15,13 +16,18 @@ $(".card-img-top").on("click", function () {
 
   if (counter === targetNumber) {
     alert("You won, you are amazing!");
+    wins++;
+    logging();
     startGame();
   }
 
   else if (counter >= targetNumber) {
     alert("You didn't win, but always remember 'if at first you don't exceed, try try again!'");
+    losses++;
+    logging();
     startGame();
   }
+
 
 });
 function startGame() {
@@ -37,4 +43,22 @@ function startGame() {
   $("#counter").text(counter);
 
 }
+
+function logging() {
+  var logWins = "<h3> Wins : " + wins + "</h3>";
+var logLosses = "<h3> Losses : " + losses + "</h3>";
+  $("#wins").html(logWins);
+    $("#losses").html(logLosses);
+    
+
+}
+
+function resetButton() {
+  wins = 0;
+  losses = 0;
+  startGame();	
+  logging();
+}
+
+document.getElementById("reset").onclick = resetButton;
 startGame();

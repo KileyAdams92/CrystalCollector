@@ -1,6 +1,7 @@
+
 body {
     /* background-color: lightblue; */
-     background-image: url("../images/green_dust_scratch/green_dust_scratch.png");
+     background-image: url("../images/cheap_diagonal_fabric/cheap_diagonal_fabric.png");
 }
 
 .numberCol {
@@ -9,4 +10,15 @@ body {
 
 .container-fluid{
     text-align: center;
+}
+
+.container {
+    background-color: white; 
+    border:20px ridge #61bbb8;
+}
+
+.container-fluid {
+    margin-bottom: 30px;
+    border:20px ridge #61bbb8;
+    background-color: white;
 }
